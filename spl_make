@@ -42,7 +42,7 @@ ifdef CONFIG_STORAGE_MEDIA_MMC
 endif
 ifdef CONFIG_STORAGE_MEDIA_SPINOR
 		@git show HEAD --pretty=format:"%H" | head -n 1 > cur.log
-		@add_hash.sh -f sunxi_spl/boot0/boot0_spinor.bin -m boot0
+		@./add_hash.sh -f sunxi_spl/boot0/boot0_spinor.bin -m boot0
 		@$(TOPDIR)/tools/gen_check_sum sunxi_spl/boot0/boot0_spinor.bin boot0_spinor_$(CONFIG_TARGET_NAME).bin > /dev/null
 endif
 sboot:
